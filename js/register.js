@@ -1,4 +1,19 @@
 $(document).ready(function() {
+  $('#form_btn').on('click', function() {
+    $('#slider').fadeIn('slow');
+    if (this.hash !== "") {
+     event.preventDefault();
+
+     var hash = this.hash;
+
+     $('html, body').animate({
+       scrollTop: $('#up').offset().top
+     }, 800, function(){
+
+       window.location.hash = hash;
+     });
+   }
+});
 
   $('#btn_1').on('click', function() {
     $('#faded_text').fadeIn('slow');
@@ -66,6 +81,7 @@ $(document).ready(function() {
       error_email = true;
     }
   }
+
   $("#form").submit(function() {
     error_name = false;
     error_email = false;

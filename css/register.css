@@ -164,9 +164,6 @@ button{
   background-color: red;
 }
 
-#faded_text{
-
-}
 span{
   font-family:sans-serif;
   color: 	#c1e4f4;
@@ -178,14 +175,26 @@ img{
   width: 600px;
 }
 
-#copy {
-  border-top:20px solid #b6d3fc;
-  padding:5px 30px 20px 0;
-  color:#b6d3fc;
-  text-align:right;
-  font-size:0.8em;
+
+#form_btn{
+  margin-top: 20px;
+  width: 300px;
+  height: 100px;
+  box-sizing: border-box;
+  background-color:	#001529;
+  color: #c1e4f4;
+  border-radius: 10px;
+  box-shadow: 0 0 8px 	#001529;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  text-align: center;
+  justify-content: center;
 }
-#copy a {
-  color:#b6d3fc;
-  text-decoration:none;
+#slider{
+  display: none;
+}
+
+#line{
+ border-top:20px solid  #c1e4f4;
+
 }
