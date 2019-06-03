@@ -1,0 +1,191 @@
+/* register_form css */
+#logo{
+  margin: 0;
+  padding: 0;
+  width:100%;
+
+}
+.grid-container {
+  display: inline-grid;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  margin: 50px auto;
+  background-image: url("cave.jpg");
+  background-repeat: no-repeat;
+  border-radius: 70px;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  grid-gap: 10px;
+
+}
+#column_1{
+  grid-column: 1 / 2;
+  padding: 40px;
+}
+#column_2{
+  grid-column: 2 / 2;
+  padding: 40px;
+
+}
+.grid-text {
+  display: inline-grid;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  margin: 50px auto;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  grid-gap: 10px;
+}
+
+#column_3{
+  grid-column: 1 / 2;
+  padding: 40px;
+}
+#column_4{
+  grid-column: 2 / 2;
+  padding: 40px;
+}
+
+hr{
+  color: #c1e4f4;
+}
+
+
+body {
+  font-family:'Open Sans',sans-serif;
+  font-size:20px;
+  color:#000;
+  background-color:	#001529;
+  font-weight:400;
+  padding:0;
+  margin:0;
+}
+
+#form{
+  padding-top: 30px;
+  max-width: 600px;
+  padding: 30px;
+  margin: 30px auto;
+
+}
+
+
+
+label {
+  width:200px;
+  display:inline-block;
+  font-family:sans-serif;
+  font-weight: bold;
+  color: 	#c1e4f4;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+ input {
+   width:250px;
+   border-bottom:3px solid  	#001529;
+   box-shadow: 0 0 5px #043846;
+   padding:5px;
+   border-radius:8px;
+   font-family:sans-serif;
+   font-weight: bold;
+   margin:  5px;
+
+ }
+ #faded_text {
+   font-family:sans-serif;
+   color: 	#c1e4f4;
+   font-size: 1.2rem;
+   font-weight: bold;
+ }
+ p{
+   font-family:sans-serif;
+   color: 	#c1e4f4;
+   font-size: 1.2rem;
+   font-weight: bold;
+ }
+ h2{
+   font-family:sans-serif;
+   color: 	#c1e4f4;
+   font-size: 1.4rem;
+   font-weight: bold;
+   margin-left: 70px;
+   margin-top:60px;
+
+ }
+ h4{
+   font-family:sans-serif;
+   color: 	#c1e4f4;
+   font-size: 1.4rem;
+   font-weight: bold;
+ }
+ input > #name, #email, #pass,
+  #re_pass, #terms {
+   font-family:sans-serif;
+   color: 	#001529;
+   font-size: 1rem;
+   font-weight: bold;
+ }
+#name{
+  font-family:sans-serif;
+  color: 	#001529;
+  font-size: 1rem;
+  font-weight: bold;
+}
+ #terms {
+ margin-right: 7px;
+ margin-bottom:5px;
+ box-shadow: none;
+}
+
+button{
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  background-color:	#001529;
+  color: #c1e4f4;
+  border-radius: 10px;
+  box-shadow: 0 0 8px 	#001529;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+  display: block;
+  margin: auto;
+  margin-top:  10px;
+}
+
+.error{
+  background-color: red;
+}
+
+#faded_text{
+
+}
+span{
+  font-family:sans-serif;
+  color: 	#c1e4f4;
+  font-size: 1rem;
+  font-weight: bold;
+}
+img{
+  margin: auto;
+  width: 600px;
+}
+
+#copy {
+  border-top:20px solid #b6d3fc;
+  padding:5px 30px 20px 0;
+  color:#b6d3fc;
+  text-align:right;
+  font-size:0.8em;
+}
+#copy a {
+  color:#b6d3fc;
+  text-decoration:none;
+}

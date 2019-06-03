@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("cave.jpg");
+
+}
+#wrap {
+  margin: 0 auto 30px;
+}
+
+#regbar {
+  height: 67px;
+
+}
+
+#navthing {
+  margin-left: 50px;
+}
+
+h1{
+    padding: 40px;
+    color: #c1e4f4;
+    margin: 20px;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 0 0 3px #c1e4f4, 0 0 5px #0000FF;
+}
+h2 {
+  padding: 20px;
+  color: #fff;
+}
+
+fieldset {
+  border: none;
+}
+
+.login {
+  position: relative;
+  width: 350px;
+  display: none;
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 15px solid #ECF0F1;
+  left: 10%;
+  position: absolute;
+  top: -10px;
+}
+
+.formholder {
+  background: #c1e4f4;
+  width: 350px;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+.formholder input[type="username"], .formholder input[type="password"] {
+  padding: 7px 5px;
+  margin: 10px 0;
+  width: 96%;
+  display: block;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+.formholder input[type="username"]:focus, .formholder input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0 0 1px 1px #6dd7fd;
+}
+.formholder input[type="submit"] {
+  background: #0093cb;
+  padding: 10px;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+.formholder input[type="submit"]:hover {
+  background: #6dd7fd;
+}
+
+.randompad {
+  padding: 10px;
+}
+
+.clicked {
+  color: #0093cb;
+}
+
+a {
+  color: #c1e4f4;
+  text-decoration: none;
+}
+a:hover {
+  color: #0093cb;
+}
+
+#game_area{
+ margin: auto;
+ width: 1000px;
+ padding: 10px;
+ border-style: solid;
+ border-width: 10px;
+}
+.legend{
+  color:  #fff;
+  text-align:center;
+  font-weight:bold;
+
+
+}

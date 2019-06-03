@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/register.js"></script>
+  <link rel="stylesheet" href="css/register.css">
+  <title>Game log in form</title>
+
+  <script>
+
+  let crossFadeDuration = 3;
+  let slideShowSpeed = 3500;
+  let Pic = new Array();
+  Pic[0] = "js/slides/slide1.png";
+  Pic[1] = "js/slides/slide2.png";
+  Pic[2] = "js/slides/slide3.png";
+
+
+  let t;
+  let j = 0;
+  let p = Pic.length;
+  let preLoad = new Array();
+  for (i = 0; i < p; i++) {
+    preLoad[i] = new Image();
+    preLoad[i].src = Pic[i];
+  }
+
+  function runSlideShow() {
+    if (document.all) {
+      document.images.SlideShow.style.filter = "blendTrans(duration=2)";
+      document.images.SlideShow.style.filter =
+        "blendTrans(duration=crossFadeDuration)";
+      document.images.SlideShow.filters.blendTrans.Apply();
+    }
+    document.images.SlideShow.src = preLoad[j].src;
+    if (document.all) {
+      document.images.SlideShow.filters.blendTrans.Play();
+    }
+    j = j + 1;
+    if (j > (p - 1)) j = 0;
+    t = setTimeout('runSlideShow()', slideShowSpeed);
+  }
+  </script>
+</head>
+
+<body>
+    <img id="logo" src="assets/logo.png" alt="logo">
+
+<h2>Welcome to the Jumpin'Diamond</h2>
+
+<div class="grid-text">
+<div id="column_3">
+<img src="" id='SlideShow' width=600 height=400 alt='slideShow'>
+<script type="text/javascript">
+runSlideShow();
+</script>
+</div>
+
+<div id="column_4">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</div>
+<hr><hr>
+<button type="button" id="form_btn">You can create an Account or Sign In here</button>
+
+<div class="grid-container">
+  <div id="column_1">
+
+    <br><br><br>
+
+    <p> Try and collect all the diamonds and see what prise you can get! Be aware of your surroundings! Don't die and try to upgrade your score!</p>
+    <br>
+    <p>First sign up and see for yourself how far can you go!</p>
+    <br>
+    <p>Already have an account?</p>
+    <p>You can sign in and play the game.</p>
+    <br>
+    <button type="button" id="btn_2"> Sign in</button>
+  </div>
+
+  <div id ="column_2">
+
+  <p>Don't have an account? How about creating one!</p>
+  <br>
+
+  <h4>Create Account</h4>
+
+  <form name="myForm" id="form" action="?" method="post">
+  <label for="name">Username:</label>
+  <input type="text" id="name" name="name"  placeholder="Username">
+  <span class="error_form" id="name_error_message"></span>
+
+  <label for="email">E-Mail:</label>
+  <input type="text" id="email" name="email"  placeholder="E-Mail">
+  <span class="error_form" id="email_error_message"></span>
+
+  <label for="pass">Password:</label>
+  <input type="text" id="pass" name="pass"  placeholder="Password">
+  <span class="error_form" id="password_error_message"></span>
+
+  <label for="re_pass">Retype password:</label>
+  <input type="text" id="re_pass" name="re_pass"  placeholder="Retype password">
+  <span class="error_form" id="retype_password_error_message"></span>
+
+  <label for="terms">I have read and I agree to the terms and conditions</label>
+  <input type="checkbox" id="terms" name="terms" value="yes">
+  <br><br><br><br>
+  <button>Create account</button>
+  </form>
+  </div>
+</div>
+
+<footer>
+  <div id="copy">
+    design by <a href="microgame.co.uk">microgame.co.uk</a>
+  </div>
+</footer>
+</body>
+</html>
