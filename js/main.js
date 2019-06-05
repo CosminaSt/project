@@ -15,5 +15,4 @@ window.onload = function() {
   $('input[type="submit"]').click(function(){
     $('.login').fadeToggle('slow');
   })
-
 }

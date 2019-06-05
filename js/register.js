@@ -27,7 +27,7 @@ $(document).ready(function() {
   let error_password = false;
   let error_retype_password = false;
   $("#name").focusout(function() {
-    check_fname();
+    check_name();
   });
   $("#email").focusout(function() {
     check_email();
@@ -83,20 +83,53 @@ $(document).ready(function() {
   }
 
   $("#form").submit(function() {
-    error_name = false;
-    error_email = false;
-    error_password = false;
-    error_retype_password = false;
-    check_name();
-    check_email();
-    check_password();
-    check_retype_password();
-    if (error_name === false && error_email === false && error_password === false && error_retype_password === false) {
-      alert("Registration successfull");
-      return true;
-    } else {
-      alert("Please fill the form correctly");
-      return false;
-    }
-  });
+
+    // let formData = {
+		// 	'name' 				: $('input[name=name]').val(),
+		// 	'email' 			: $('input[name=email]').val(),
+		// 	'pass' 	      : $('input[name=pass]').val(),
+		// 	're_pass' 	  : $('input[name=re_pass]').val()
+		// };
+    //
+		// // process the form
+		// $.ajax({
+		// 	type 		: 'POST',
+		// 	url 		: 'process.php',
+		// 	data 		: formData,
+		// 	dataType 	: 'json',
+		// 	encode 		: true
+		// })
+    //
+		// 	.done(function(data) {
+		// 		console.log(data);
+    //
+		// 		// here we will handle errors and validation messages
+        error_name = false;
+        error_email = false;
+        error_password = false;
+        error_retype_password = false;
+        check_name();
+        check_email();
+        check_password();
+        check_retype_password();
+        if (error_name === false && error_email === false && error_password === false && error_retype_password === false) {
+          alert("Registration successfull");
+          return true;
+        } else {
+          alert("Please fill the form correctly");
+          return false;
+        };
+      // });
+			// using the fail promise callback
+			// .fail(function(data) {
+			// 	console.log(data);
+			// });
+
+		// stop the form from submitting the normal way and refreshing the page
+		event.preventDefault();
+	});
+
+
+
+
 });
