@@ -67,8 +67,16 @@ mainScene.create = function() {
 
   this.anims.create({
     key: 'walk',
-    frames: this.anims.generateFrameNumbers('char', {start:4, end:7}),
-    frameRate: 5,
+    frames: this.anims.generateFrameNumbers('char',
+    {
+    prefix: 'walk',
+    start: 4,
+    end: 7,
+    suffix: '.png',
+    zeroPad: 0
+  }),
+    frameRate: 10,
+    delay: 0,
     repeat: -1
   });
   console.log(this.anims);
@@ -81,9 +89,9 @@ mainScene.create = function() {
   this.cursors = this.input.keyboard.createCursorKeys();
 
   // finding the coordonates in the game
-  this.input.on('pointerdown', function(pointer) {
-    console.log(pointer.x, pointer.y);
-  });
+  // this.input.on('pointerdown', function(pointer) {
+  //   console.log(pointer.x, pointer.y);
+  // });
 };
 
 mainScene.update = function() {
