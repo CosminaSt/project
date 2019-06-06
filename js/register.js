@@ -14,10 +14,10 @@ $(document).ready(function() {
      });
    }
 });
-
-  $('#btn_1').on('click', function() {
-    $('#faded_text').fadeIn('slow');
-  });
+  //
+  // $('#btn_1').on('click', function() {
+  //   $('#faded_text').fadeIn('slow');
+  // });
   $('#btn_2').on('click', function() {
     window.location.replace('game.html');
   });
@@ -84,25 +84,26 @@ $(document).ready(function() {
 
   $("#form").submit(function() {
 
-    // let formData = {
-		// 	'name' 				: $('input[name=name]').val(),
-		// 	'email' 			: $('input[name=email]').val(),
-		// 	'pass' 	      : $('input[name=pass]').val(),
-		// 	're_pass' 	  : $('input[name=re_pass]').val()
-		// };
-    //
-		// // process the form
+    let formData = {
+			'name' : $('input[name=name]').val(),
+			'email' : $('input[name=email]').val(),
+			'pass' : $('input[name=pass]').val(),
+			're_pass' : $('input[name=re_pass]').val()
+		};
+
+		// process the form
 		// $.ajax({
 		// 	type 		: 'POST',
-		// 	url 		: 'process.php',
-		// 	data 		: formData,
+		// 	url 		: 'js/process.php',
+		// 	data 		: 'formData',
 		// 	dataType 	: 'json',
-		// 	encode 		: true
-		// })
-    //
-		// 	.done(function(data) {
-		// 		console.log(data);
-    //
+    //   contentType: 'application/x-www-form-urlencoded',
+		// 	encode 		: true,
+    //   success: function(answer){
+    //     callback(answer);
+    //   }
+		// });
+
 		// 		// here we will handle errors and validation messages
         error_name = false;
         error_email = false;
@@ -114,7 +115,7 @@ $(document).ready(function() {
         check_retype_password();
         if (error_name === false && error_email === false && error_password === false && error_retype_password === false) {
           alert("Registration successfull");
-          return true;
+
         } else {
           alert("Please fill the form correctly");
           return false;
@@ -126,10 +127,11 @@ $(document).ready(function() {
 			// });
 
 		// stop the form from submitting the normal way and refreshing the page
-		event.preventDefault();
+		// event.preventDefault();
+    // $('#submit').on('click', function() {
+    //   window.location.replace('game.html');
+    // });
+
+
 	});
-
-
-
-
 });
